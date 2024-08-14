@@ -1,0 +1,1 @@
+ccsCTF{f1le_can_b3_0pened_by_many_ways}
