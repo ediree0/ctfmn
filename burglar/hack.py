@@ -9,6 +9,7 @@
 #a = decompress(a)
 
 #print(a) 
+
 import socket
 
 # Function to encrypt data with XOR
