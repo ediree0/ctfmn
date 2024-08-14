@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Define the path to the script you want to run
+SCRIPT_PATH="/home/kk/Documents/ctfmnn/matr/crack.sh"
+
+# Check if the script exists
+if [ -f "$SCRIPT_PATH" ]; then
+    echo "Running script: $SCRIPT_PATH"
+    
+    # Loop through numbers from 999 to 1
+    for ((i=998; i>=1; i--)); do
+        echo "Running $SCRIPT_PATH with argument: $i"
+        # Run the script with the current number as an argument
+        "$SCRIPT_PATH" "$i"
+    done
+else
+    echo "Script not found: $SCRIPT_PATH"
+fi

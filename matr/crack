@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Check if the correct number of arguments is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 filename"
+    exit 1
+fi
+
+# Get the filename from the argument
+filename="$1"
+
+# Check if the file exists
+if [ ! -e "$filename" ]; then
+    echo "Error: File '$filename' does not exist."
+    exit 1
+fi
+
+# Determine the file type
+file_type=$(file --brief "$filename")
+
+# Print the file type
+echo "File type of '$filename': $file_type"
+
+# Check if the file is a POSIX tar archive
+if echo "$file_type" | grep -q "POSIX tar archive"; then
+    echo "The file is a POSIX tar archive. Extracting it..."
+    
+    # Extract the archive based on its compression type
+    case "$file_type" in
+        *gzip*)
+            tar -xzvf "$filename"
+            ;;
+        *bzip2*)
+            tar -xjvf "$filename"
+            ;;
+        *xz*)
+            tar -xJvf "$filename"
+            ;;
+        *)
+            tar -xvf "$filename"
+            ;;
+    esac
+
+elif echo "$file_type" | grep -q "Zip archive data"; then
+    echo "The file is a ZIP archive. Extracting it..."
+    
+    # Extract the ZIP archive
+    unzip "$filename"
+
+else
+    echo "The file is neither a POSIX tar archive nor a ZIP archive. No extraction performed."
+    exit 1
+fi
