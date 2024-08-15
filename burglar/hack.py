@@ -1,15 +1,3 @@
-#from base64 import b64decode
-#from zlib import decompress
-
-
-
-#a = b'=Ab60gyJjbfV7OrLdpHv9kS7q0HO//33+4mCiP/tW+yu8WA5Yt05uxCEBhR+DGorJ+3JjigOd32OczxI/I66yOaLTDyHrIH+PZo841pJgX8eyhCsaQK2NhZbXPgYVq6R/eQ+y2ysytf6k3NX4vdZdzlo5frxLiPZQqhtYhErX1N6xgTcOMReOVn1dEMrastRk+7+j4p3NjZunugzxumVGYY+JG2kr/dpWTrOEsHVDKNAAK0bmtXim+SCsY7bTG3Wa3KRLagutNpee9lPYKWvfL5K9zHPJcZik1n3MM2ZbRDPGOsEVotHiEaFlWmqvj+Z9kWA40lmQYMFPLkS6SxTzm1HF6g2odE6GfYu6g2aocxc2VU/G5Ekp5pD4/7cIrOqP6BRS/b2H0W5axAeaTzJJOK7MmmQ6xeNNrXXjh43gnAXfCrHYUpclM3magoXTBeHt8UCkULBPmelUZAkVsaUVdiFAgYSBou6AbI14t/S7s7M7EDYz/y0wtT3v3fVE0tbrvDkTL2w6gSfWNKswm2qdQIXeIVKa52RikIYPIRsf9LfQA0mv1lUtxJe'
-#a = a[::-1]
-#a = b64decode(a)
-#a = decompress(a)
-
-#print(a) 
-
 import socket
 
 # Function to encrypt data with XOR
