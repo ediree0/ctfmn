@@ -47,3 +47,7 @@ if __name__ == '__main__':
     main()
 
 ``` 
+and here is the flag :)
+```
+HZU18{Hell0_friend_how_Loow?}
+```
