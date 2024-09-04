@@ -3,7 +3,7 @@
 
 ![Original picture](https://github.com/ediree0/ctfmn/blob/main/rgb-plane/decodethis.png)
 
-![Red picture](https://github.com/ediree0/rgb-plane/red.png)
+![Red picture](https://github.com/ediree0/ctfmn/blob/main/rgb-plane/red.png)
 `
 01100011 01100011 01110011 01000011 01010100 01000110 01111011
 `
