@@ -1,6 +1,6 @@
 # Cave Writeup
 this challenge is closed and the site is now not accessable but its a site with bunch of chests and when you click on it it opens and you have to find the flag in those chests
-with curl and the chest number we get outputs if the output contains Nothing we do not display 
+with curl and the chest number we get outputs if the output contains Nothing we do not display.
 
 ```bash
 #!/bin/bash
