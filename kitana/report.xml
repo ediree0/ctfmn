@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dfxml xmloutputversion='1.0'>
+  <metadata 
+  xmlns='http://afflib.org/tcpflow/' 
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xmlns:dc='http://purl.org/dc/elements/1.1/'>
+    <dc:type>Feature Extraction</dc:type>
+  </metadata>
+  <creator version='1.0'>
+    <program>TCPFLOW</program>
+    <version>1.6.1</version>
+    <build_environment>
+      <compiler>13.2.0 (13.2.0)</compiler>
+      <CPPFLAGS>-I/usr/local/include -Wdate-time -D_FORTIFY_SOURCE=2 -I/usr/local/include -DUTC_OFFSET=+0000</CPPFLAGS>
+      <CFLAGS>-g -g -O3 -ffile-prefix-map=/build/reproducible-path/tcpflow-1.6.1=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -MD -Wpointer-arith -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wwrite-strings -Wcast-align -Waggregate-return -Wbad-function-cast -Wcast-qual -Wundef -Wredundant-decls -Wdisabled-optimization -Wfloat-equal -Wmultichar -Wc++-compat -Wmissing-noreturn -Wall -Wstrict-prototypes -MD -D_FORTIFY_SOURCE=2 -Wpointer-arith -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wwrite-strings -Wcast-align -Waggregate-return -Wbad-function-cast -Wcast-qual -Wundef -Wredundant-decls -Wdisabled-optimization -Wfloat-equal -Wmultichar -Wc++-compat -Wmissing-noreturn -Wall -Wstrict-prototypes</CFLAGS>
+      <CXXFLAGS>-g -g -O3 -ffile-prefix-map=/build/reproducible-path/tcpflow-1.6.1=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -Wall -MD -D_FORTIFY_SOURCE=2 -Wpointer-arith -Wshadow -Wwrite-strings -Wcast-align -Wredundant-decls -Wdisabled-optimization -Wfloat-equal -Wmultichar -Wmissing-noreturn -Woverloaded-virtual -Wsign-promo -funit-at-a-time -Weffc++ -Wno-address-of-packed-member</CXXFLAGS>
+      <LDFLAGS>-L/usr/local/lib -Wl,-z,relro -L/usr/local/lib</LDFLAGS>
+      <LIBS>-lpcap -lcairo -lfontconfig -lfreetype -lbz2 -lpixman-1 -lexpat -lcrypto -lssl -lcrypto -ldl -lz </LIBS>
+      <compilation_date>2024-03-09T22:46:27</compilation_date>
+      <library name="boost" version="108300"/>
+    </build_environment>
+    <execution_environment>
+      <os_sysname>Linux</os_sysname>
+      <os_release>5.15.153.1-microsoft-standard-WSL2</os_release>
+      <os_version>#1 SMP Fri Mar 29 23:14:13 UTC 2024</os_version>
+      <host>DESKTOP-6K8R4UO</host>
+      <arch>x86_64</arch>
+      <command_line>command line to be provided</command_line>
+      <uid>1000</uid>
+      <username>ediree</username>
+      <start_time>2024-10-21T13:06:58Z</start_time>
+    </execution_environment>
+  </creator>
+  <configuration>
+  </configuration>
+  <tdelta>0</tdelta>
+  <configuration>
+    <fileobject>
+      <filename>004.005.006.007.12345-008.009.010.011.02355</filename>
+      <filesize>266589</filesize>
+      <tcpflow startime='2018-09-18T03:11:57.109788Z' endtime='2018-09-18T03:14:03.270293Z' mac_daddr='00:50:56:ea:35:a0' mac_saddr='00:0c:29:e3:a4:29' family='2' src_ipn='4.5.6.7' dst_ipn='8.9.10.11' srcport='12345' dstport='2355' packets='1249' out_of_order_count='635' len='926987' />
+    </fileobject>
+  </configuration>
+  <summary />
+  <open_fds_at_end>1</open_fds_at_end>
+  <max_open_flows>1</max_open_flows>
+  <total_flows>1</total_flows>
+  <flow_map_size>1</flow_map_size>
+  <total_packets>1249</total_packets>
+  <rusage>
+    <utime>0.006289</utime>
+    <stime>0.006289</stime>
+    <maxrss>11852</maxrss>
+    <minflt>1338</minflt>
+    <majflt>18</majflt>
+    <nswap>0</nswap>
+    <inblock>2240</inblock>
+    <oublock>536</oublock>
+    <clocktime>0.002390</clocktime>
+  </rusage>
+</dfxml>
