@@ -1,6 +1,6 @@
 import binascii
 
-def main(): 
+def main():
 	with open("2d.txt",'r') as file:
 		text = file.read()
 		binary = ''
