@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Fetcher</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f3f3;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 8px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button[type="submit"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    #fetchedContent {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+      white-space: pre-wrap;
+    }
+    .error {
+      color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>URL Fetcher</h1>
+    <form id="fetchForm">
+      <label for="url">Enter URL:</label>
+      <input type="text" id="url" name="url" required>
+      <button type="submit">Fetch URL</button>
+    </form>
+
+    <div id="fetchedContent"></div>
+  </div>
+
+  <script>
+    const fetchForm = document.getElementById('fetchForm');
+
+    fetchForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      fetchURL();
+    });
+
+    function fetchURL() {
+      const urlInput = document.getElementById('url').value;
+      fetch(`/fetch?url=${urlInput}`)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('fetchedContent').innerHTML = `<pre>${data.body}</pre>`;
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          document.getElementById('fetchedContent').innerHTML = `<p class="error">Error: ${error}</p>`;
+        });
+    }
+  </script>
+</body>
+</html>
