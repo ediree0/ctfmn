@@ -23,7 +23,7 @@ def process_file(filename):
 
     product = ""
     for num in results:
-        product += str(num)
+        product += str(num) 
 
     return f"HZU18{{{product}}}"
 
