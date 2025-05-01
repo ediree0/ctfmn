@@ -9,5 +9,3 @@ for i in range(len(data)):
     flag += chr(data[i] ^ key[i % 4])
 
 print(flag)
-
-# MUSTCTF{SP3CTR_S3E_ALL}
