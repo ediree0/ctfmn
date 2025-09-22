@@ -1,0 +1,3 @@
+ curl 'http://139.59.230.119:10415/gun-info' \
+  -H 'Content-Type: application/json' \
+  -d '{"data":"Ad2myuJWwyrUDxChcWKO0w+m0rLbqoL61TAYN/ia35o="}'
